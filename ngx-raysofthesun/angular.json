@@ -44,5 +44,10 @@
       }
     }
   },
-  "defaultProject": "ui-elements"
+  "defaultProject": "ui-elements",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  }
 }
