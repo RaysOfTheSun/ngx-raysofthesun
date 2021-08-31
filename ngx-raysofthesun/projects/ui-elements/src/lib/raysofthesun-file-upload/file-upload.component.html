@@ -1,1 +1,33 @@
-<p>file-upload works!</p>
+<div class="legify-file-upload">
+  <ng-container
+    *ngFor="let invalidFile of invalidFiles; let fileIndex = index"
+    [ngTemplateOutlet]="invalidItemTemplate"
+    [ngTemplateOutletContext]="{ $implicit: invalidFile }"
+  ></ng-container>
+  <ng-container
+    *ngFor="let file of files; let fileIndex = index"
+    [ngTemplateOutlet]="itemTemplate"
+    [ngTemplateOutletContext]="{ $implicit: file }"
+  ></ng-container>
+  <ng-container
+    [ngTemplateOutlet]="inputTemplate"
+    *ngIf="isFileInputShown()"
+  ></ng-container>
+
+  <input
+    type="file"
+    class="legify-file-upload__file-input"
+    [multiple]="multipleUpload"
+    (change)="handleFileInputChange($event)"
+    #newFileInput
+  />
+  <input
+    id="replacementFileInput"
+    type="file"
+    class="legify-file-upload__file-input"
+    (change)="handleReplacementFileInputChange($event)"
+    #replacementFileInput
+  />
+</div>
+
+<ng-content></ng-content>

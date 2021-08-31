@@ -1,0 +1,13 @@
+<div class="portal-file-upload-input" raysofthesunFileUploadInput>
+  <div class="portal-file-upload-input__content">
+    <mat-icon class="portal-file-upload-input__icon">description</mat-icon>
+    <span class="portal-file-upload-input__text">Choose file</span>
+  </div>
+  <span
+    class="portal-file-upload-input__error-message"
+    [ngClass]="{
+      'portal-file-upload-input__error-message--shown': showErrorBanner
+    }"
+    >You have reached the upload limit for this type</span
+  >
+</div>

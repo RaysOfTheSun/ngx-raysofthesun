@@ -1,0 +1,22 @@
+.portal-file-upload {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(470px * 2);
+  flex-wrap: wrap;
+  margin: 20px;
+
+  &__input {
+    margin-left: auto;
+  }
+
+  &__error-banner {
+    opacity: 0;
+    color: #ef5350;
+    margin-left: 20px;
+    transition: opacity 250ms ease;
+
+    &--shown {
+      opacity: 1;
+    }
+  }
+}

@@ -39,7 +39,8 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'raysofthesun-file-upload',
   templateUrl: './file-upload.component.html',
-  styleUrls: ['./file-upload.component.scss']
+  styleUrls: ['./file-upload.component.scss'],
+  providers: [FileUploadService, FileUploadEventService]
 })
 export class FileUploadComponent implements OnInit, OnDestroy, OnChanges {
   @Output()

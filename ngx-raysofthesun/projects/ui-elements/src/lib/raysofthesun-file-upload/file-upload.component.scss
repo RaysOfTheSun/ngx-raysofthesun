@@ -1,0 +1,17 @@
+.legify-file-upload {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__file-input {
+    display: none;
+  }
+
+  &__file-input-trigger {
+    display: none;
+  }
+}

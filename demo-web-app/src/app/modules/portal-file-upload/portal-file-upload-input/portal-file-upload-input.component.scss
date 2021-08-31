@@ -1,0 +1,42 @@
+.portal-file-upload-input {
+  cursor: pointer;
+  min-width: 430px;
+  max-width: 430px;
+  margin: 0 20px;
+
+  &__content {
+    display: flex;
+    padding: 20px 40px;
+    min-height: 93px;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px dashed #bdbdbd;
+  }
+
+  &__text {
+    display: block;
+    margin: 0 10px;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+  }
+
+  &__error-message {
+    color: #ef5350;
+    display: inline-block;
+    opacity: 0;
+    margin: 5px 0;
+    width: 100%;
+    &--shown {
+      opacity: 1;
+      transition: opacity 250ms ease;
+    }
+  }
+
+  &__error-banner-icon {
+    margin-right: 5px;
+  }
+}

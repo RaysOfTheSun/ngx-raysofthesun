@@ -1,0 +1,12 @@
+.portal-file-upload-preview-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__preview {
+    margin: auto;
+    display: block;
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: contain;
+  }
+}

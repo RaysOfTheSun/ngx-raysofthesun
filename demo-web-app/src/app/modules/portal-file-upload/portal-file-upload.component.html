@@ -1,0 +1,32 @@
+<div class="portal-file-upload">
+  <raysofthesun-file-upload
+    [files]="allFiles$ | async"
+    [minimumUploads]="minimumUploads"
+    [maximumUploads]="maximumUploads"
+    [alwaysShowInput]="true"
+    (fileAdded)="handleFileAdded($event)"
+    (itemClicked)="handleItemClicked($event)"
+    (itemRemoved)="handleItemRemoved($event)"
+    (itemReplaced)="handleItemReplaced($event)"
+    (uploadLimitReached)="handleItemLimitReached($event)"
+    (minimumUploadsNotReached)="handleMinimumUploadsNotReached($event)"
+  >
+    <ng-template let-file raysofthesunFileUploadItem>
+      <app-portal-file-upload-item [src]="file"></app-portal-file-upload-item>
+    </ng-template>
+    <ng-template raysofthesunFileUploadInput>
+      <app-portal-file-upload-input
+        [showErrorBanner]="errorShown$ | async"
+        class="portal-file-upload__input"
+      ></app-portal-file-upload-input>
+    </ng-template>
+  </raysofthesun-file-upload>
+  <span
+    class="portal-file-upload__error-banner"
+    [ngClass]="{
+      'portal-file-upload__error-banner--shown': isLackingDocuments$ | async
+    }"
+  >
+    You need to upload a minimum of {{ minimumUploads }} document(s)
+  </span>
+</div>

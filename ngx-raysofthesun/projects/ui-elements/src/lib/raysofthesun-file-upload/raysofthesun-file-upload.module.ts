@@ -14,6 +14,7 @@ import {
   FILE_UPLOAD_PREVIEW_MODAL_CONFIG
 } from './constants';
 import { FileUploadConfigService } from './services';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FileUploadConfigService } from './services';
   ],
   imports: [CommonModule],
   exports: [
+    MatDialogModule,
     FileUploadComponent,
     FileUploadItemDirective,
     FileUploadInputDirective,

@@ -1,0 +1,19 @@
+<div class="portal-file-upload-item" [raysofthesunFileUploadPreview]="src">
+  <div class="portal-file-upload-item__content">
+    <div class="portal-file-upload-item__preview-icon">
+      <img [src]="src.file" class="portal-file-upload-item__image-preview" />
+    </div>
+    <div class="portal-file-upload-item__item-details">
+      <span class="portal-file-upload-item__detail"> {{ src.name }} </span>
+      <span class="portal-file-upload-item__detail"> {{ src.size }} </span>
+    </div>
+    <mat-icon
+      class="portal-file-upload-item__delete-icon"
+      [raysofthesunFileUploadDelete]="src"
+      >close</mat-icon
+    >
+  </div>
+  <span class="portal-file-upload-item__upload-date">
+    Uploaded on {{ uploadDate.toDateString() }}
+  </span>
+</div>
